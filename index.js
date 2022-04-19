@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('./public'))
 
 const lists = ['Buy FOOD ', 'Make FOOD', 'Eat FOOD']
-
 app.get('/', (req, res) => {
     res.render('list', { listTitle: date.fulltoDay(), lists: lists })
 })
