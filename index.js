@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
     res.render('list', { listTitle: date.fulltoDay(), lists: lists })
 })
 
+app.post('/', (req, res) => {
+    lists.push(req.body.addItem)
+    res.redirect('/')
+})
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('LISTEN at the port 3000')
